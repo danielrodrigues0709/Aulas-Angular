@@ -116,4 +116,4 @@ const Update = Nanny(State)
 
 ## Desafio
 
-Crie um formulario de newsletter, onde valide o email se é um email válido e que ao enviar, faça um feedback ao usuário informando que ele foi cadastrado com sucesso.
+Crie uma simulação simples de carrinho de compras de loja virtual. Use o state para armazenar informações e poder calcular o valor total do pedido.
