@@ -31,7 +31,9 @@ Esta é a principal razão pelo qual um estado jamais deverá ser alterado diret
 
 ## O que é state (estado) no Javascript?
 
-Gerência de estados tem sido um assunto da atualidade, principalmente se você está envolvido com Javascript e toda velocidade do nosso ecossistema gigantesco, com certeza, pelo menos já se deparou com algo sobre. O conceito geral de estado na programação é uma fonte única de verdade.
+Gerência de estados tem sido um assunto da atualidade, principalmente se você está envolvido com Javascript e toda velocidade do nosso ecossistema gigantesco, com certeza, pelo menos já se deparou com algo sobre.
+
+O conceito geral de estado na programação é uma fonte única de verdade. Na época do JQuery, o html era o state da aplicação e o que os famosos frameworks fizeram foi trazer o state para o javascript para gerenciá-lo e facilitar o reloading, melhorando a experiência de desenvolvimento.
 
 ### Controlando o estado
 
@@ -40,7 +42,7 @@ Como Vanilla é cada um por si, não tem maneira certa pra fazer não... se quis
 Se quiser algo mais funcional é só ficar mais atento em relação a imutabilidade (e evitar usar os this).
 
 ```javascript
-// factoryzinha marota
+// factory
 const createStore = function (initialState = {}) {
   let state = initialState
 
@@ -107,6 +109,8 @@ const Update = Nanny(State)
 * <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures>
 * <https://developer.mozilla.org/pt-BR/docs/Glossary/Primitive>
 * <https://dev.to/carlosrafael22/de-volta-ao-basico-tipos-primitivos-e-objetos-em-javascript-h9g>
+* <https://blog.codecasts.com.br/pure-finctions-immutability-clean-code-quality-31825b0d7516>
+* <https://medium.com/opensanca/imutabilidade-eis-a-quest%C3%A3o-507fde8c6686>
 * <https://www.youtube.com/watch?v=n5uiJr-v0KQ>
 * <https://morioh.com/p/d86c97c99528>
 
