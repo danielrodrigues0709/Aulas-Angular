@@ -27,3 +27,9 @@ uf.addEventListener('change', async (event) => {
 
   cidades.innerHTML += options;
 })
+
+// temos um bug ao selecionar um proximo estado que irá incremntar a lista com mais municipios ao invés de limpar e trazer a lista de cidades somente daquele estado
+
+uf.addEventListener('click', function() {
+  cidades.innerHTML = `<option></option>`;
+})
