@@ -93,3 +93,7 @@ Abra uma *issue*: <https://github.com/profalves/Aulas-Angular/issues>
 ## Sugestões e Melhorias
 
 Para contribuir com o material, basta dar um fork e enviar um pull request. Ou abra uma issue e faça seus comentários
+
+[//]: <> (Comentários)
+[//]: <> (Para realizar o upload das aulas faça:)
+[//]: <> (`git checkout develop -- semana-1/aula-01`)
