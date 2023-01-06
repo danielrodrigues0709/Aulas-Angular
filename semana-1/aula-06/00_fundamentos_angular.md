@@ -51,6 +51,17 @@ Para iniciar o projeto em um servidor local, utilizamos o comando:
 ng serve
 ```
 
+Após executar este comando o angular criará a pasta de seu projeto no diretório selecionado. Sua estrutura inicial será parecida com isto:
+
+![Estrutura de pastas](https://miro.medium.com/max/640/1*_ljQM3O12_xfHalbaJcDJQ.webp)
+
+Note que ao gerar o esquema de pastas, o Angular cria uma pasta chamada app. Esta por sua vez, é responsável por englobar o componente inicial do projeto:
+
+- `app.component.css` — Responsável pela estilização do componente core.
+- `app.component.html` — Responsável pela apresentação do componente core.
+- `app.component.ts` — Classe responsável pelas regras lógicas do componente core.
+- `app.component.spec.ts` — Responsável por executar testes unitários no componente core.
+
 ## 3. Módulos
 
 Um módulo pode ser entendido como um bloco de código que define um domínio dentro da aplicação,
