@@ -4,12 +4,15 @@ Aprendizado de estruturas básicas do angular
 
 - [Angular conceitos básicos](#angular-conceitos-básicos)
   - [1. Importação de módulos e uso de componentes](#1-importação-de-módulos-e-uso-de-componentes)
-  - [2. Diretivas Condicionais](#2-diretivas-condicionais)
-    - [ngIf](#ngif)
-    - [ngSwitch](#ngswitch)
-  - [3. Diretiva de Laços](#3-diretiva-de-laços)
-    - [ngFor](#ngfor)
-  - [4. Interpolação](#4-interpolação)
+  - [2. Diretivas](#2-diretivas)
+    - [Diretivaa Condicionais](#diretivaa-condicionais)
+      - [ngIf](#ngif)
+      - [ngSwitch](#ngswitch)
+    - [Diretiva de Laços](#diretiva-de-laços)
+      - [ngFor](#ngfor)
+  - [3. Interpolação](#3-interpolação)
+  - [4. Dependency injection (DI)](#4-dependency-injection-di)
+  - [Docs](#docs)
 
 ## 1. Importação de módulos e uso de componentes
 
@@ -60,9 +63,21 @@ No nosso HTML podemos utilizar o componente como um elemento html baseado em seu
 <app-dashboard></app-dashboard>
 ```
 
-## 2. Diretivas Condicionais
+## 2. Diretivas
 
-### ngIf
+As diretivas são como marcadores no elemento DOM que comunicam ao Angular para incluir um comportamento específico.
+
+Existem três tipo de diretivas no Angular, que são: *Diretivas de atributos*, *Diretivas estruturais* e *Componentes*.
+
+- **Diretivas de atributos**: Alteram a aparência ou o comportamento de um elemento, componente ou outra diretiva, como por exemplo, `NgClass` e `NgStyle`.
+
+- **Diretivas estruturais**: Modificam o layout adicionando ou removendo elementos do DOM, como por exemplo, `NgIf` e `NgFor`.
+
+- **Componentes**: Na prática, um Componente é uma Diretiva com um Template. Assim, um Componente é um tipo de Diretiva, que nem sempre está relacionada a algo visual.
+
+### Diretivaa Condicionais
+
+#### ngIf
 
 A diretiva ngIf é fundamental no desenvolvimento com angular, pois permite criar estruturas
 condicionais no template html.
@@ -92,7 +107,7 @@ utilizando na nossa chamada do else:
 </ng-template>
 ```
 
-### ngSwitch
+#### ngSwitch
 
 O ngSwitch funciona como o switch case do Javascript, e permite avaliar um valor passado e
 renderizar o conteúdo conforme o seu resultado.
@@ -105,11 +120,11 @@ renderizar o conteúdo conforme o seu resultado.
 </div>
 ```
 
-## 3. Diretiva de Laços
+### Diretiva de Laços
 
-### ngFor
+#### ngFor
 
-Loops / laços, são essenciais em qualquer linguagem e não diferiria com o angular,
+Loops/laços são essenciais em qualquer linguagem e não diferiria com o angular,
 podemos realizar loops através dos componentes, para trabalhar principalmente com listas
 de informações:
 
@@ -134,14 +149,40 @@ Além disso, podemos também capturar o index da coleção iterada:
 </div>
 ```
 
-## 4. Interpolação
+## 3. Interpolação
 
-Podemos também exibir conteúdo vindo do nosso arquivo component.ts diretamente no HTML, através
-da interpolação "{{}}":
+A interpolação é usada para exibir uma propriedade do componente no HTML.
+
+Sua sintaxe são chaves duplas e podemos exibir qualquer tipo de dados, por exemplo, números, datas, arrays e etc…
+
+```ts
+export class AppComponent {
+  propriedade = "Hello!!!"
+}
+```
+
+Após isso, podemos também exibir conteúdo vindo do arquivo `.ts` diretamente no HTML, através da interpolação `{{ }}`:
 
 ```html
-<div>
-  <h3>Horário atual: </h3>
-  <span>{{hour}}</span>
-</div>
+<h1>{{propriedade}}</h1> 
 ```
+
+## 4. Dependency injection (DI)
+
+O **DI** é conectado à estrutura Angular e usado em todos os lugares para fornecer aos componentes os serviços (ou outras coisas) que eles precisam.
+
+Componentes consomem serviços. Isto é, você pode injetar um serviço em um componente, dando acesso ao componente para essa classe de serviço.
+
+Para realizar isso, usamos o `providedIn`, que é uma propriedade do decorator `@Injectable`.
+
+```ts
+@Injetable({
+ providedIn: SomeModule
+})
+```
+
+---
+
+## Docs
+
+- <https://blog.geekhunter.com.br/um-overview-sobre-o-framework-angular/>

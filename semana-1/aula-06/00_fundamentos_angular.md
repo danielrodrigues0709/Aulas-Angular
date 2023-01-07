@@ -24,8 +24,23 @@ Para iniciar o desenvolvimento de SPA's com o angular, é necessário pelo menos
 
 ### Angular CLI
 
-Ferramenta de linha de comando que permite a criação de novos SPA's, componentes, módulos, etc.
-Voltado ao angular, é extremamente importante pois facilita o desenvolvimento de aplicações angular.
+Ferramenta de linha de comando que permite a criação de novos SPA's, componentes, módulos, etc. Voltado ao angular, é extremamente importante pois facilita o desenvolvimento de aplicações angular.
+
+A CLI Angular é uma ferramenta de interface da linha de comandos que você usa para inicializar, desenvolver e manter aplicativos Angular.
+
+Nesse sentido, ela é a forma mais fácil, rápida e recomendada de se iniciar a sua aplicação em Angular, pois permite a criação de novos SPA's, componentes, módulos, etc. Voltado ao angular, é extremamente importante pois facilita o desenvolvimento de aplicações angular.
+
+Para você ter noção, alguns exemplos de comandos abaixo deixam claro como o uso de Angular CLI facilita a vida do programador:
+
+| Comando  |  Para que serve?  |
+|----------|:------------------|
+| `ng build` | Compila um aplicativo Angular em um diretório de saída. |
+| `ng serve` | Cria um servidor local HTTP para testar seu aplicativo, reconstruindo as alterações do arquivo. |
+| `ng generate` | Gera ou modifica arquivos com base em um esquema. |
+| `ng test` | Executa testes de unidade em um determinado projeto. |
+| ng e2e | Constrói e fornece um aplicativo Angular e, em seguida, executa testes de ponta a ponta. |
+
+Você pode usar a ferramenta diretamente em um *shell* de comando ou indiretamente por meio de uma interface do usuário interativa, como o [**Angular Console**](https://blog.angular.io/angular-console-21d36c02ff76).
 
 ## 2. Criação do primeiro projeto
 
@@ -67,11 +82,44 @@ Note que ao gerar o esquema de pastas, o Angular cria uma pasta chamada app. Est
 Um módulo pode ser entendido como um bloco de código que define um domínio dentro da aplicação,
 a exemplo: Em uma aplicação voltada a saúde, podemos ter, pacientes, médicos, convênios. E para cada
 um deles podemos criar módulos para melhorar a organização do nosso código.
-Os módulos também são conjuntos de componentes e diretívas.
 
-### Metadados do módulo
+A arquitetura do Angular permite organizar a aplicação por módulos através dos `NgModules`, que fornecem um contexto para os componentes serem compilados.
 
-Os módulos possuem um decorator chamado @NgModule, que permite relizar algumas configurações
+Uma aplicação sempre tem ao menos um módulo raiz que habilita a inicialização e, normalmente, possui outros módulos de bibliotecas.
+
+Os componentes deliberam as visualizações — que são conglomerados de elementos e funcionalidades de tela — que o Angular modifica de acordo com a lógica e os dados da aplicação.
+
+Esses componentes usam serviços que fornecem funcionalidades específicas e que são indiretamente relacionadas a essas visualizações.
+
+Os **provedores de serviços** podem ser injetados nos componentes como dependências, tornando seu código modular e reutilizável. Serviços e componentes são simples classes com decoradores, que definem o tipo e fornecem metadados para informar o Angular como usá-los.
+
+![grafico](https://blog.geekhunter.com.br/wp-content/uploads/2019/10/arquitetura-angular.jpg)
+
+### NgModules
+
+Tem como objetivo declarar e agrupar tudo que criamos no Angular. Existem duas estrutura principais, que são: `declarations` e o `providers`.
+
+**Declarations** é onde declaramos os itens que iremos utilizar nesse módulo, como por exemplo componentes e diretivas, já nos **Providers** informamos os serviços.
+
+```ts
+@NgModule({
+  declarations: [ AppComponent],
+  providers: [ AuthClientService  ],
+})
+```
+
+Assim como módulos JavaScript, o NgModules também pode importar funcionalidades de outros NgModules e permitir que suas próprias funcionalidades também sejam exportadas.
+
+Um exemplo claro disso é que para usar o serviço de rotas no seu app basta importar o `RouterNgModule`.
+
+```ts
+@NgModule({
+  declarations: [ AppComponent ],
+  imports: [ AppRoutingModule ],
+})
+```
+
+O `@NgModule` permite relizar algumas configurações
 essenciais ao módulo:
 
 - **Declarations**: Permite informar os componentes vinculados aquele módulo
@@ -95,7 +143,7 @@ essenciais ao módulo:
 
 ## 4. Componentes
 
-Um componente é uma classe em uma aplicação angular, que pode definir uma página da sua aplicação,
+A maior parte do desenvolvimento quando se utiliza o framework Angular é feito nos componentes. Um componente é uma classe em uma aplicação angular, que pode definir uma página da sua aplicação,
 ou algum item menor como um componente de input personalizado, uma lista, botão, etc.
 
 ```bash
@@ -124,9 +172,10 @@ algumas configurações no módulo como:
 ```typescript
 // componente app
 @Component({
-selector: 'app-root',
-templateUrl: './app.component.html',
-styleUrls: ['./app.component.scss']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  providers: [ HeroService ]
 })
 ```
 
@@ -137,6 +186,7 @@ styleUrls: ['./app.component.scss']
 - <https://angular.io>
 - <https://angular.io/cli>
 - <https://www.devmedia.com.br/angular-cli-como-criar-e-executar-um-projeto-angular/38246>
+- <https://blog.betrybe.com/framework-de-programacao/angular/>
 
 ---
 
