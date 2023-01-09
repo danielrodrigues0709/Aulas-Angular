@@ -106,6 +106,8 @@ Conflitos no Git são bastante comuns e **acontecem sempre quando o mesmo arquiv
 
 - <https://metring.com.br/guia-resolvendo-conflitos-no-git>
 
+> Todos os comandos explicados acima e um pouco mais está em um compilado neste meu repositório particular que pode ser usado para consulta e estudos: <https://github.com/profalves/Comandos-Git>
+
 #### Docs
 
 - <https://git-scm.com/>
