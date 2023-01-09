@@ -11,6 +11,7 @@ Aprendizado de estruturas básicas do angular
     - [Diretiva de Laços](#diretiva-de-laços)
       - [ngFor](#ngfor)
   - [3. Interpolação](#3-interpolação)
+  - [4. Decorador de classe](#4-decorador-de-classe)
   - [4. Dependency injection (DI)](#4-dependency-injection-di)
   - [Docs](#docs)
 
@@ -166,6 +167,20 @@ Após isso, podemos também exibir conteúdo vindo do arquivo `.ts` diretamente 
 ```html
 <h1>{{propriedade}}</h1> 
 ```
+
+## 4. Decorador de classe
+
+Um decorator que aparece logo antes de uma definição de classe, que declara que a classe é do tipo fornecido e oferece metadados adequados ao tipo. Os seguintes decoradores podem declarar tipos de classe Angular:
+
+`@Component()`
+
+`@Directive()`
+
+`@Pipe()`
+
+`@Injectable()`
+
+`@NgModule()`
 
 ## 4. Dependency injection (DI)
 

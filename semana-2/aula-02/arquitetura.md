@@ -4,7 +4,7 @@ O Angular é um framework para o desenvolvimento de software front-end. Isso que
 
 Um software desenvolvido em Angular é composto por diversos elementos como: módulos, componentes, templates e serviços. Esses elementos fazem parte da arquitetura do Angular, que é ilustrada pela figura a seguir.
 
-![arquitetura](https://jacksongomesbr.gitbooks.io/desenvolvimento-web-front-end-com-angular/content/assets/visao-geral-da-arquitetura-do-angular.png)
+![arquitetura](https://algaworks-blog.s3.amazonaws.com/wp-content/uploads/Building-blocks-angular.png)
 
 ## Padrões de arquitetura
 
@@ -26,6 +26,12 @@ Um software desenvolvido em Angular possui pelo menos um módulo, chamado root m
 **Bibliotecas** funcionam como um agrupador de elementos de software desenvolvido em Angular. Bibliotecas oficiais têm o prefixo `@angular`. Geralmente é possível instalar bibliotecas utilizando o **npm** (gerenciador de pacotes do NodeJs).
 
 Uma biblioteca pode conter módulos, componentes, diretivas e serviços.
+
+**Exemplos de Bibliotecas**:
+
+- *PrimeNG*;
+- *Angular Material*;
+- *ng-bootstrap*;
 
 ### Componentes
 
@@ -50,6 +56,8 @@ Se o Controller atualiza o Model, então o Template tem que ser atualizado autom
 ### Serviços
 
 Um **Serviço** é uma abstração do Angular utilizado *para isolar a lógica de negócio de Componentes*. Na prática, um Serviço é representado por uma classe com métodos que podem ser utilizados em Componentes. Para isso, para que um Componente utilize um serviço, o Angular utiliza o conceito de **Injeção de Dependência** (*DI, do inglês Dependency Injection*). DI é um padrão de software que faz com que dependências sejam fornecidas para quem precisar. Na prática, o Angular identifica as dependências de um Componente e cria automaticamente instâncias delas, para que sejam utilizadas posteriormente no Componente.
+
+![services representation](https://algaworks-blog.s3.amazonaws.com/wp-content/uploads/Angular-services-1024x436.png)
 
 ---
 

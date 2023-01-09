@@ -187,6 +187,7 @@ algumas configurações no módulo como:
 - <https://angular.io/cli>
 - <https://www.devmedia.com.br/angular-cli-como-criar-e-executar-um-projeto-angular/38246>
 - <https://blog.betrybe.com/framework-de-programacao/angular/>
+- <https://blog.algaworks.com/o-que-e-angular/>
 
 ---
 
